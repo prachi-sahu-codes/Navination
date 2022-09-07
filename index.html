@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Navi language</title>
+    <style>
+      :root {
+        --primary-color: #002e47;
+        --secondary-color: #add3c2;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Josefin Sans", sans-serif;
+        height: 100%;
+        background-image: url("img/bg2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .navigation {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+      .nav-title {
+        font-size: 1.3rem;
+      }
+
+      a {
+        color: var(--secondary-color);
+        padding-left: 1rem;
+        text-decoration: none;
+        font-size: 1.3rem;
+      }
+
+      .main-body::before {
+        content: "";
+        left: 0;
+        top: 0;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 45rem;
+        z-index: -10;
+        opacity: 0.1;
+      }
+
+      .trans-box {
+        height: 7rem;
+        line-height: 1.8rem;
+        width: 60%;
+        font-size: 1.5rem;
+        display: block;
+        margin: 3rem auto;
+        padding: 1.6rem;
+        font-family: inherit;
+        font-weight: 500;
+      }
+
+      #btn-translate {
+        font-family: inherit;
+        display: block;
+        margin: 0.5rem auto;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+      }
+
+      #output {
+        border: 1px solid #181818;
+      }
+      .output-details {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      footer {
+        width: 100%;
+        bottom: 0;
+        background-color: var(--primary-color);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 1rem 0;
+      }
+      .about {
+        padding-top: 2rem;
+        color: var(--secondary-color);
+      }
+
+      .details {
+        width: 70%;
+        margin: 1.5rem auto;
+        color: var(--secondary-color);
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+      }
+
+      .footer-name {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 0 0 1rem 0;
+        color: var(--secondary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navigation">
+      <h1 class="nav-title">Navi Talk</h1>
+      <div>
+        <a href="https://github.com/prachi-sahu-codes" target="_blank">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://twitter.com/sahuprachi637">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/prachi-sahu-96b228200/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:prachisahu998@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </nav>
+    <section class="main-body"></section>
+
+    <textarea
+      class="trans-box"
+      id="txt-input"
+      placeholder="Type your english sentence in here and we will translate it into Navi language"
+    ></textarea>
+    <button id="btn-translate">Translate to Navi</button>
+
+    <div class="output-details">Translation will come here 👇</div>
+    <div class="trans-box" id="output"></div>
+
+    <footer>
+      <div class="about">About</div>
+      <p class="details">
+        Convert from English language to Navi language. Na'vi is a constructed
+        language spoken by the Na'vi people in the fictional world Pandora in
+        James Cameron's blockbuster movie Avatar.
+      </p>
+
+      <div class="footer-name">Made by Prachi</div>
+    </footer>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
