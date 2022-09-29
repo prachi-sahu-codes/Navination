@@ -1,16 +1,20 @@
 const btnTranslate = document.querySelector("#btn-translate");
 const txtInput = document.querySelector("#txt-input");
 const outputDiv = document.querySelector("#output");
+const errorText = document.querySelector(".error-text");
 
 const serverUrl = "https://api.funtranslations.com/translate/navi.json";
 
 const translatedText = function (text) {
+  errorText.innerText = "";
   return serverUrl + "?" + "text=" + text;
 };
 
 const errorHandler = function (error) {
-  console.log("Some Error occured", error);
-  alert("Hey there! Some error occured please try again later ");
+  errorText.innerText =
+    "Hey! something is wrong with the server!! Can you please try again later.";
+  errorText.style.color = "white";
+  outputDiv.innerText = "";
 };
 
 const clickHandler = function () {
